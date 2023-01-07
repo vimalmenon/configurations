@@ -113,6 +113,13 @@ map bp :bp<cr>
 map bd :bd<cr>
 
 
+" Move the line Down
+nnoremap <silent> md :m+1<CR>
+nnoremap <silent> mu :m-2<CR>
+vnoremap <silent> md :m+1<CR>
+vnoremap <silent> mu :m-2<CR>
+
+
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
