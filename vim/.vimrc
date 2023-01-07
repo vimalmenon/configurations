@@ -20,6 +20,8 @@ call plug#begin()
 	Plug 'rhysd/vim-healthcheck'
 	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
+  "Plug
+  Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " Syntax
@@ -104,9 +106,11 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+
 " Navigation through buffer
-map gn :bn<cr>
-map gp :bp<cr>
+map bn :bn<cr>
+map bp :bp<cr>
+map bd :bd<cr>
 
 
 noremap <Up> <Nop>
@@ -133,5 +137,4 @@ if has('nvim')
 else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
-
 
