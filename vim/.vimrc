@@ -22,6 +22,8 @@ call plug#begin()
 
   "Plug
   Plug 'airblade/vim-gitgutter'
+  Plug 'tpope/vim-fugitive'
+
 call plug#end()
 
 " Syntax
@@ -44,6 +46,9 @@ set clipboard=unnamedplus
 set wildmenu
 set cursorline
 
+" Use highlighting when doing a search.
+set hlsearch
+
 set encoding=UTF-8
 set guifont=DroidSansMono\ Nerd\ Font:h11
 
@@ -63,6 +68,9 @@ let &t_ZR = "\e[23m"
 " Color scheme and themes
 let t_Co = 256
 colorscheme iceberg
+
+set laststatus=2
+
 
 " Cursor Mode
 let &t_SI = "\e[6 q"
@@ -112,12 +120,31 @@ map bn :bn<cr>
 map bp :bp<cr>
 map bd :bd<cr>
 
+" Resize split windows using arrow keys by pressing:
+" CTRL+UP, CTRL+DOWN, CTRL+LEFT, or CTRL+RIGHT.
+noremap <c-up> <c-w>+
+noremap <c-down> <c-w>-
+noremap <c-left> <c-w>>
+noremap <c-right> <c-w><
 
-" Move the line Down
-nnoremap <silent> md :m+1<CR>
-nnoremap <silent> mu :m-2<CR>
-vnoremap <silent> md :m+1<CR>
-vnoremap <silent> mu :m-2<CR>
+" Yank from cursor to the end of line.
+nnoremap Y y$
+
+
+" Type jj to exit insert mode quickly.
+inoremap jj <Esc>
+
+" Press the space bar to type the : character in command mode.
+nnoremap <space> :
+
+" Pressing the letter o will open a new line below the current one.
+" Exit insert mode after creating a new line above or below the current line.
+nnoremap o o<esc>
+nnoremap O O<esc>
+
+" Center the cursor vertically when moving to the next word during a search.
+nnoremap n nzz
+nnoremap N Nzz
 
 
 noremap <Up> <Nop>
@@ -144,4 +171,5 @@ if has('nvim')
 else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
+
 
