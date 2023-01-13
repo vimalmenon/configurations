@@ -25,6 +25,9 @@ call plug#begin()
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-commentary'
 
+  "Plug for Python
+  Plug 'davidhalter/jedi-vim'
+
 call plug#end()
 
 " Syntax
@@ -86,6 +89,8 @@ let g:webdevicons_enable_nerdtree = 1
 
 let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-tsserver']
 
+let g:jedi#environment_path = "/usr/local/Caskroom/miniconda/base/bin/python"
+
 " Leader
 let mapleader = ','
 
@@ -123,10 +128,10 @@ map bd :bd<cr>
 
 " Resize split windows using arrow keys by pressing:
 " CTRL+UP, CTRL+DOWN, CTRL+LEFT, or CTRL+RIGHT.
-noremap <c-up> <c-w>+
-noremap <c-down> <c-w>-
-noremap <c-left> <c-w>>
-noremap <c-right> <c-w><
+noremap <leader><up> <c-w>+
+noremap <leader><down> <c-w>-
+noremap <leader><left> <c-w>>
+noremap <leader><right> <c-w><
 
 " Yank from cursor to the end of line.
 nnoremap Y y$
