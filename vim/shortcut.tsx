@@ -12,3 +12,6 @@ https://github.com/mileszs/ack.vim
 https://github.com/mg979/vim-visual-multi
 https://github.com/neoclide/coc.nvim
 https://github.com/dense-analysis/ale#faq-statusline
+https://www.freecodecamp.org/news/vimrc-configuration-guide-customize-your-vim-editor/
+https://github.com/mg979/vim-visual-multi/wiki/Quick-start
+https://github.com/mg979/vim-visual-multi
