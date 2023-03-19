@@ -2,7 +2,8 @@ fn + f1   = Health check
 fn + f4   = Buffer Delete
 ^         = Beginning of line
 $         = End of line
-
+"ay       = Copy Selected to register "a"
+"ap       = paste from register "a"
 md        = move the line down
 mu        = move the line up 
 
