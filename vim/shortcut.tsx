@@ -1,8 +1,11 @@
-fn + f1 = Health check
-fn + f4 = Buffer Delete
+fn + f1   = Health check
+fn + f4   = Buffer Delete
+^         = Beginning of line
+$         = End of line
 
 md = move the line down
 mu = move the line up 
+
 
 
 https://vim.rtorr.com/
