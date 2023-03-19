@@ -3,8 +3,8 @@ fn + f4   = Buffer Delete
 ^         = Beginning of line
 $         = End of line
 
-md = move the line down
-mu = move the line up 
+md        = move the line down
+mu        = move the line up 
 
 
 
