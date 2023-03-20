@@ -6,7 +6,8 @@ $         = End of line
 "ap       = paste from register "a"
 md        = move the line down
 mu        = move the line up 
-
+ctrl-w_   = maximize current window
+ctrl-w=   = make all equal size
 
 
 https://vim.rtorr.com/
